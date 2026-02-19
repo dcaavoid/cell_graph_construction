@@ -17,8 +17,8 @@ import numpy as np
 from pathlib import Path
 from tqdm import tqdm
 
-from config import (
-    RAW_WSI_DIR, OUTPUT_DIR, MONUSEG_WEIGHTS,
+from pipeline_config import (
+    RAW_WSI_DIR, OUTPUT_DIR, HOVERNET_WEIGHTS,
     TILE_SIZE, OVERLAP, STRIDE, DEVICE
 )
 from wsi_loader import load_wsi, get_wsi_dimensions, get_wsi_metadata
@@ -109,7 +109,7 @@ def main():
     parser = argparse.ArgumentParser(description="Nuclei Detection for HACT-Net")
     parser.add_argument("--wsi_dir", type=str, default=str(RAW_WSI_DIR))
     parser.add_argument("--output_dir", type=str, default=str(OUTPUT_DIR))
-    parser.add_argument("--weights", type=str, default=str(MONUSEG_WEIGHTS))
+    parser.add_argument("--weights", type=str, default=str(HOVERNET_WEIGHTS))
     args = parser.parse_args()
 
     wsi_dir = Path(args.wsi_dir)

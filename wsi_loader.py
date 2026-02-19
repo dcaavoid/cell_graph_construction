@@ -10,7 +10,7 @@ import openslide
 from pathlib import Path
 from typing import Dict, Tuple
 
-from config import MAGNIFICATION_LEVEL
+from pipeline_config import MAGNIFICATION_LEVEL
 
 
 def load_wsi(wsi_path: str) -> openslide.OpenSlide:

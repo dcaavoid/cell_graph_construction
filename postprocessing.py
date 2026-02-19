@@ -7,7 +7,7 @@ Step 2.4: Transform the local coordinates on each tile into a global absolute oo
 import numpy as np
 from typing import List, Dict, Tuple
 from skimage.measure import regionprops
-from config import TILE_SIZE, OVERLAP, VALID_MARGIN
+from pipeline_config import TILE_SIZE, OVERLAP, VALID_MARGIN
 
 
 def extract_centroids(instance_map: np.ndarray) -> List[Dict]:

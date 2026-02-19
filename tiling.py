@@ -12,7 +12,7 @@ import numpy as np
 import openslide
 from typing import Generator, Tuple
 
-from config import TILE_SIZE, OVERLAP, STRIDE, MAGNIFICATION_LEVEL, TISSUE_THRESHOLD
+from pipeline_config import TILE_SIZE, OVERLAP, STRIDE, MAGNIFICATION_LEVEL, TISSUE_THRESHOLD
 
 
 def calculate_tile_grid(
